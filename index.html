@@ -1,13 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>The Time Gambit</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <H1>
-        The Time Gambit
-    </H1>
-    <!-- Javascript -->
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="videobackground" type="video/mp4"> <!-- Video Background as file in GitHub -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="content">
+        <section id="game-section">
+            <div class="game-container">
+                <iframe src="builtgame.html" frameborder="0"></iframe> <!-- HTML Build for the game from Unity -->
+            </div>
+        </section>
+
+        <section id="team-section">
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="photo-circle"><img src="image1.jpg" alt="Alex Modée"></div>
+                    <p>Alex Modée</p>
+                    <p>roles</p>
+                </div>
+                <div class="team-member">
+                    <div class="photo-circle"><img src="image22.jpg" alt="Jessica Gorwat"></div>
+                    <p>Jessica Gorwat</p>
+                    <p>roles</p>
+                </div>
+                <div class="team-member">
+                    <div class="photo-circle"><img src="image3.jpg" alt="Jonatan Tuvstedt"></div>
+                    <p>Jonatan Tuvstedt</p>
+                    <p>roles</p>
+                </div>
+                <div class="team-member">
+                    <div class="photo-circle"><img src="image4.jpg" alt="Lan Xu"></div>
+                    <p>Lan Xu</p>
+                    <p>roles</p>
+                </div>
+                <div class="team-member">
+                    <div class="photo-circle"><img src="image5.jpg" alt="Vlad Prodan"></div>
+                    <p>Vlad Prodan</p>
+                    <p>roles</p>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
     <script src="main_script.js"></script>
 </body>
 </html>
