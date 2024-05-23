@@ -1,9 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-}
-
-/* ------------------- Title ----------------- */
-
 #title {
     text-align: center; 
     font-family: 'Roboto', sans-serif; 
@@ -17,4 +11,77 @@ body {
 
 #title:hover {
     transform: scale(1.05);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+#game-section {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+.game-container {
+    width: 100%;
+    height: 600px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#team-section {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 10px;
+}
+
+.photo-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.photo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
