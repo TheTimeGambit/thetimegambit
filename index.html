@@ -53,22 +53,7 @@
         </section>
     </div>
 
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-        // Code to load the Unity WebGL build with decompressed files
-        const buildUrl = 'Build/';
-
-        // Configure UnityLoader to use decompressed files
-        window.UnityLoader.instantiate("unity-frame", buildUrl + "Build.json", { streamingAssetsUrl: "StreamingAssets", companyName: "Company", productName: "Product", productVersion: "1.0", showBanner: unityShowBanner });
-
-        function unityShowBanner(msg, type) {
-            if (type === 'error') {
-                console.error(msg);
-            } else {
-                console.log(msg);
-            }
-        }
-    </script>
+   
     
 </body>
 </html>
