@@ -83,6 +83,8 @@ body, html {
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .photo-circle img {
