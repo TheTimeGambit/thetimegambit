@@ -9,7 +9,7 @@
 <body>
     <div class="video-background">
         <video autoplay muted loop id="background-video">
-            <source src="background.mp4" type="video/mp4"> <!-- Video Background as file in GitHub -->
+            <source src="background.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -17,7 +17,7 @@
     <div class="content">
         <section id="game-section">
             <div class="game-container">
-                <iframe src="builtgame.html" frameborder="0"></iframe> <!-- HTML Build for the game from Unity -->
+                <iframe id="unity-frame" src="builtgame.html"></iframe>
             </div>
         </section>
 
@@ -53,6 +53,22 @@
         </section>
     </div>
 
-    <script src="main_script.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+        // Code to load the Unity WebGL build with gzip files
+        const unityLoaderUrl = 'Build/UnityLoader.js';
+        const buildUrl = 'Build/';
+
+        // Configure UnityLoader to use gzip files
+        window.UnityLoader.instantiate("unity-frame", buildUrl + "Build.json", { streamingAssetsUrl: "StreamingAssets", companyName: "Company", productName: "Product", productVersion: "1.0", showBanner: unityShowBanner });
+
+        function unityShowBanner(msg, type) {
+            if (type === 'error') {
+                console.error(msg);
+            } else {
+                console.log(msg);
+            }
+        }
+    </script>
 </body>
 </html>
