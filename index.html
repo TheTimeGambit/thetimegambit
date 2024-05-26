@@ -55,11 +55,10 @@
 
     <script src="Build/UnityLoader.js"></script>
     <script>
-        // Code to load the Unity WebGL build with gzip files
-        const unityLoaderUrl = 'Build/UnityLoader.js';
+        // Code to load the Unity WebGL build with decompressed files
         const buildUrl = 'Build/';
 
-        // Configure UnityLoader to use gzip files
+        // Configure UnityLoader to use decompressed files
         window.UnityLoader.instantiate("unity-frame", buildUrl + "Build.json", { streamingAssetsUrl: "StreamingAssets", companyName: "Company", productName: "Product", productVersion: "1.0", showBanner: unityShowBanner });
 
         function unityShowBanner(msg, type) {
@@ -70,5 +69,6 @@
             }
         }
     </script>
+    
 </body>
 </html>
