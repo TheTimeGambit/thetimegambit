@@ -45,6 +45,12 @@ body, html {
     position: relative;
 }
 
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
 #team-section {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
